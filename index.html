@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de PRESET VRP para QBCORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Crimson Core</h1> <!-- Nome da empresa -->
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="title-container"> <!-- Div para o título -->
+                <h2>Conversor PRESET VRP para QBCORE</h2>
+            </div>
+            
+            <div class="input-label"> <!-- Div para o label -->
+                <label for="jsonInput"><h2>Digite o preset em VRP:</h2></label>
+            </div>
+            <div class="input-area"> <!-- Div para o textarea de entrada -->
+                <textarea id="jsonInput" rows="10" placeholder="Insira o preset aqui..."></textarea>
+            </div>
+            
+            <div class="button-container"> <!-- Div para o botão de converter -->
+                <button id="convertBtn">Converter</button>
+            </div>
+
+            <div class="output-label"> <!-- Div para o label do resultado -->
+                <h2>Resultado convertido para QBCore:</h2>
+            </div>
+            <div class="output-area"> <!-- Div para o textarea de saída -->
+                <textarea id="jsonOutput" rows="10" readonly></textarea> <!-- Mudança aqui para textarea -->
+            </div>
+
+            <div class="copy-button-container"> <!-- Div para o botão COPIAR -->
+                <button id="copyBtn">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Este produto é de propriedade intelectual da Crimson Core©. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        // Função para copiar o texto do output
+        document.getElementById('copyBtn').addEventListener('click', function() {
+            const output = document.getElementById('jsonOutput');
+            output.select();
+            document.execCommand('copy');
+        });
+    </script>
+</body>
+</html>

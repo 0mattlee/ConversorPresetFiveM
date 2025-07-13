@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    min-height: 100vh; /* Garante que o body ocupe a altura total da janela */
+    margin: 0; /* Remove margens padrão */
+    font-family: "Nunito Sans", sans-serif; /* Define a fonte padrão */
+    background: #1B181F; /* Cor de fundo escura */
+    color: #F2F2F3; /* Cor do texto */
+}
+
+
+.header {
+    text-align: left; /* Alinha o texto à esquerda */
+    padding: 20px; /* Adiciona preenchimento */
+    margin-left: 30px; /* Adiciona margem à esquerda */
+}
+
+.header h1 {
+    font-family: "Six Caps", sans-serif; /* Define a fonte para o cabeçalho */
+    font-size: 50px; /* Tamanho da fonte */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+.container {
+    flex: 1; /* Faz a área do conteúdo ocupar o espaço disponível */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: center; /* Centraliza o conteúdo */
+    width: 80%; /* Largura do conteúdo */
+}
+
+.title-container {
+    margin-top: -80px; /* Ajuste para mover o título para cima */
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.input-label, .output-label {
+    margin: 5px 0; /* Margem para espaçamento do label */
+    font-size: 12px;
+}
+
+.input-area, .output-area {
+    width: 100%; /* Largura do textarea */
+    margin-bottom: 20px; /* Espaçamento abaixo dos textareas */
+}
+
+textarea {
+    background: #121113; /* Fundo do textarea */
+    color: #F2F2F3; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Preenchimento interno */
+    width: 100%; /* Largura do textarea */
+    resize: none; /* Desabilita redimensionamento */
+    overflow: auto; /* Permite rolagem se o texto exceder o tamanho */
+    font-family: "Nunito Sans", sans-serif; /* Fonte consistente com o resto do design */
+    font-size: 16px; /* Tamanho da fonte do textarea */
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #c72a3e; /* Carmesim */
+    }
+    25% {
+        border-color: #6b1c88; /* Roxo */
+    }
+    50% {
+        border-color: #c72a3e; /* Carmesim */
+    }
+    75% {
+        border-color: #6b1c88; /* Roxo */
+    }
+    100% {
+        border-color: #c72a3e; /* Carmesim */
+    }
+}
+
+button {
+    background: linear-gradient(to right, #2F2C40 0%, #5d035c 50%, #f1647e); /* Gradiente para o botão */
+    border: 2px solid transparent; /* Borda transparente para o efeito */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Preenchimento interno */
+    color: #F2F2F3; /* Cor do texto do botão */
+    font-weight: bold; /* Negrito */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    margin: 5px 0; /* Margem para espaçamento */
+    transition: all 0.3s ease; /* Transição suave para hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para efeito de profundidade */
+    animation: borderAnimation 4s linear infinite; /* Animação da borda */
+}
+
+button:hover {
+    background: linear-gradient(to right, #f1647e 0%, #4e1c4a 50%); /* Efeito hover */
+    transform: translateY(-2px); /* Leve elevação ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(201, 6, 6, 0.4); /* Sombra mais intensa no hover */
+}
+
+#jsonOutput {
+    background: #121113; /* Fundo do output igual ao do input */
+    color: #F2F2F3; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Preenchimento interno */
+    width: 100%; /* Largura do textarea */
+    resize: none; /* Desabilita redimensionamento */
+    overflow: auto; /* Permite rolagem se o texto exceder o tamanho */
+    font-family: "Nunito Sans", sans-serif; /* Fonte consistente com o resto do design */
+    font-size: 16px; /* Tamanho da fonte do textarea */
+}
+
+.footer {
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 10px; /* Adiciona preenchimento */
+    background: #372c40; /* Cor de fundo do footer */
+    color: #F2F2F3; /* Cor do texto */
+    position: relative; /* Para permitir o uso de padding no footer */
+    bottom: 0; /* Posiciona na parte inferior */
+    width: 100%; /* Largura total */
+    margin-top: 20px; /* Margem acima do footer */
+}
